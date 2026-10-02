@@ -1,0 +1,40 @@
+name: Join the huddle
+description: Tell us how you would like to participate in AI Huddle
+title: "[Community]: "
+labels: [community]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for raising your hand. Please share only information you are comfortable making public on GitHub.
+  - type: dropdown
+    id: participation
+    attributes:
+      label: How would you like to participate?
+      options:
+        - Join a weekly session
+        - Share experience during a discussion
+        - Help facilitate a future topic
+        - Contribute to the community or website
+        - Keep me informed
+    validations:
+      required: true
+  - type: textarea
+    id: interests
+    attributes:
+      label: What AI topics or questions interest you most?
+      placeholder: A few words is plenty.
+    validations:
+      required: true
+  - type: textarea
+    id: perspective
+    attributes:
+      label: What perspective would you bring? (optional)
+      description: Role, industry, lived experience, a project, or simply curiosity—all are welcome.
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Community agreement
+      options:
+        - label: I agree to follow the AI Huddle Code of Conduct.
+          required: true

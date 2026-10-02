@@ -1,0 +1,34 @@
+name: Suggest a topic
+description: Propose a question or theme for a future AI Huddle
+title: "[Topic]: "
+labels: [topic]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or question
+      placeholder: What should AI Huddle explore?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this worth discussing now?
+      placeholder: Tell us what makes this useful to the community.
+    validations:
+      required: true
+  - type: textarea
+    id: prompts
+    attributes:
+      label: Possible discussion prompts (optional)
+      placeholder: Add questions, tensions, examples, or resources that could get the conversation moving.
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to help with this huddle?
+      options:
+        - Yes, I could help frame or facilitate it
+        - Maybe—please ask me
+        - Not this time; I am suggesting the idea
+    validations:
+      required: true
